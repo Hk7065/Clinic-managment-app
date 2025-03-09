@@ -1,0 +1,31 @@
+/* src/assets/global.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  #overview {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: aqua;
+  }

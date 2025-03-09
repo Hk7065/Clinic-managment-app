@@ -2,24 +2,26 @@ import { createRouter, createWebHistory } from "vue-router";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 // Import Views
-import Login from "@/views/Login.vue";
-import Dashboard from "@/views/Dashboard.vue";
-import Patients from "@/views/Patients.vue";
-import Tokens from "@/views/Tokens.vue";
-import Prescription from "@/views/Prescription.vue";
-import Billing from "@/views/Billing.vue";
-import NotFound from "@/views/NotFound.vue";
+import LoginView from "@/views/LoginView.vue";  
+import DashboardView from "@/views/DashboardView.vue"; 
+import SignupView from "@/views/SignupView.vue"; 
+// import PatientsView from "@/views/PatientsView.vue";
+// import Tokens from "@/views/Tokens.vue";
+// import Prescription from "@/views/Prescription.vue";
+// import Billing from "@/views/Billing.vue";
+// import NotFound from "@/views/NotFound.vue";
 
 // Define Routes
 const routes = [
-  { path: "/", redirect: "/dashboard" },
-  { path: "/login", component: Login },
-  { path: "/dashboard", component: Dashboard, meta: { requiresAuth: true } },
-  { path: "/patients", component: Patients, meta: { requiresAuth: true } },
-  { path: "/tokens", component: Tokens, meta: { requiresAuth: true } },
-  { path: "/patients/:id/prescription", component: Prescription, meta: { requiresAuth: true } },
-  { path: "/billing", component: Billing, meta: { requiresAuth: true } },
-  { path: "/:pathMatch(.*)*", component: NotFound }, // 404 Page
+  { path: "/", redirect: "/login" },
+  { path: "/dashboard", component: DashboardView },
+  { path: "/login", component: LoginView },
+  {path: "/Signup", component: SignupView },
+  // { path: "/patients", component: PatientsView, meta: { requiresAuth: true } },
+  // { path: "/tokens", component: Tokens, meta: { requiresAuth: true } },
+  // { path: "/patients/:id/prescription", component: Prescription, meta: { requiresAuth: true } },
+  // { path: "/billing", component: Billing, meta: { requiresAuth: true } },
+  // { path: "/:pathMatch(.*)*", component: NotFound }, // 404 Page
 ];
 
 // Create Router
